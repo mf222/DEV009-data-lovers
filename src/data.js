@@ -1,7 +1,5 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
+export const majorArcana = (cards) => {
+  return cards.filter((item) => item.type === 'major');
 };
 
 export const anotherExample = () => {

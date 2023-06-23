@@ -1,23 +1,16 @@
-import { example, anotherExample } from '../src/data.js';
+import { majorArcana } from '../src/data.js';
 
+const cartas = [{type: "major"}, {type: "minor"}]
 
-describe('example', () => {
+describe('majorArcana', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof majorArcana).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+  it('quiero que filtre y quede solo con las cartas arcanas', () => {
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(majorArcana(cartas).length).toBe(1); //toEqual
+    expect(majorArcana(cartas)).toEqual([{type: "major"}]);
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
 });
